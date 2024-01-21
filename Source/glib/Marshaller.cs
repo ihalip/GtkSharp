@@ -46,10 +46,10 @@ namespace GLib {
 		}
 
 		[DllImport(Global.GLibNativeDll, CallingConvention = CallingConvention.Cdecl)]
-		static extern IntPtr g_filename_to_utf8(IntPtr mem, int len, IntPtr read, out IntPtr written, out IntPtr error);
+		static extern IntPtr g_filename_to_utf8(IntPtr mem, long len, IntPtr read, out IntPtr written, out IntPtr error);
 
 		[DllImport(Global.GLibNativeDll)]
-		static extern IntPtr g_filename_to_utf8_utf8(IntPtr mem, int len, IntPtr read, out IntPtr written, out IntPtr error);
+		static extern IntPtr g_filename_to_utf8_utf8(IntPtr mem, long len, IntPtr read, out IntPtr written, out IntPtr error);
 
 		public static string FilenamePtrToString(IntPtr ptr) {
 			if (ptr == IntPtr.Zero) return null;
